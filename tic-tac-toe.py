@@ -17,29 +17,33 @@ class grid(object):
         return f" {self.cell[0]} | {self.cell[1]} | {self.cell[2]} \n-----------\n {self.cell[3]} | {self.cell[4]} | {self.cell[5]} \n-----------\n {self.cell[6]} | {self.cell[7]} | {self.cell[8]} \n"
 
 def won(A):
+    # Check horizontal wins
     for i in range(0,7,3):
-        if (A.getCell(i)==A.getCell(i+1)==A.getCell(i+2) and (A.getCell(i) in ['O','X']) ):
+        if (A.getCell(i)==A.getCell(i+1)==A.getCell(i+2) and (A.getCell(i) in ['O','X'])):
             A.setCell('*',i)
             A.setCell('*',i+1)
             A.setCell('*',i+2)
             return True
+    # Check vertical wins
     for i in range(0,3):
-        if (A.getCell(i)==A.getCell(i+3)==A.getCell(i+6) and (A.getCell(i) in ['O','X']) ):
+        if (A.getCell(i)==A.getCell(i+3)==A.getCell(i+6)) and (A.getCell(i) in ['O','X']):
             A.setCell('*',i)
-            A.setCell('*',i+2)
-            A.setCell('*',i+4)
+            A.setCell('*',i+3)
+            A.setCell('*',i+6)
             return True
-    if ( A.getCell(0)==A.getCell(4)==A.getCell(8) and (A.getCell(0) in ['O','X']) ):
+    # Check diagonals
+    if (A.getCell(0)==A.getCell(4)==A.getCell(8) and (A.getCell(0) in ['O','X'])):
         A.setCell('*',0)
         A.setCell('*',4)
         A.setCell('*',8)
         return True
-    if ( A.getCell(2)==A.getCell(4)==A.getCell(6) and (A.getCell(2) in ['O','X']) ):
+    if (A.getCell(2)==A.getCell(4)==A.getCell(6) and (A.getCell(2) in ['O','X'])):
         A.setCell('*',2)
         A.setCell('*',4)
         A.setCell('*',6)
         return True
     return False
+
 
 sampleGrid = grid([1,2,3,4,5,6,7,8,9])
 
