@@ -105,4 +105,4 @@ This project is licensed under the [MIT License](/LICENSE)
 
 **Developed with ❤️ by Prabhnoor Singh** 
 
-[![GitHub](https://img.shields.io/badge/View_Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/prabhnoor1358/python-games)
+[![GitHub](https://img.shields.io/badge/View_Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/prabhnoor25/python-games)
